@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/%22%3E">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Стоматологическая клиника</title><!--Заголовок в браузере-->
+	<title>Услуги</title>
+	<link rel="stylesheet" th:href="@{/css/style.css}">
+	<link rel="stylesheet" th:href="@{/css/bootstrap-grid.min.css}">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,400&display=swap" rel="stylesheet">
+	<link rel="shortcut icon" href="img/apple.ico" type="image/x-icon"><!--Иконка-->
+	<script type="text/javascript" src="js/script.js"></script>
+</head>
+<body id="back_news">
+<div id="header">
+	<div id="logo">
+   		<a href="/">WhiteApple &#127823;</a>
+   	</div>
+	<div id="adress">
+   		 <p><b>Адрес: </b> Долина Понтара, Оксенфурт, лечебница Шани
+		 <br><b>Тел.</b> +7(926)-481-64-20
+		 <br><b>Часы работы:</b> ежедневно с 9.00-21.00</p>
+   	</div>
+   	<nav id="menu">
+	    <ul>
+			<li><a href="/">Услуги</a></li>
+			<li><a href="/reviews">Отзывы</a></li>
+			<li><a href="/contacts">Личный кабинет</a></li>
+			<li><a href="/reg">Регистрация</a></li>
+	    </ul>
+   </nav>
+</div>
+<div class="container">
+<div class="row justify-content-md-center">
+	<div class="col-12 col-md-9 align-self-center">
+		<!-- Slideshow container -->
+		<div class="slideshow-container">
+		  <!-- Full-width images with number and caption text -->
+		  <div class="mySlides fade">
+		    <div class="numbertext">1 / 3</div>
+		    <img src="img/ст2.jpg" style="width:100%">
+		    <div class="text"><script language="JavaScript">
+				days()
+			</script><!--Использование функции из скрипта--></div>
+		  </div>
+
+		  <div class="mySlides fade">
+		    <div class="numbertext">2 / 3</div>
+		    <img src="img/ст1.jpg" style="width:100%">
+		    <div class="text"><script language="JavaScript">
+				days()
+			</script></div>
+		  </div>
+
+		  <div class="mySlides fade">
+		    <div class="numbertext">3 / 3</div>
+		    <img src="img/ст3.jpg" style="width:100%">
+		    <div class="text"><script language="JavaScript">
+				days()
+			</script></div>
+		  </div>
+
+		  <!-- Кнопки вперед и назад -->
+		  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+		</div>
+		<br>
+
+		<!-- Круглые кнопки -->
+		<div style="text-align:center">
+		  <span class="dot" onclick="currentSlide(1)"></span>
+		  <span class="dot" onclick="currentSlide(2)"></span>
+		  <span class="dot" onclick="currentSlide(3)"></span>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/slider.js"></script>
+</div>
+	<h2>Наши услуги</h2>
+	<div class="row">
+		<div class="col-12 col-sm-6 col-md-4">
+			
+			<div class="news_block">
+			    <h3>Лечение кариеса</h3>
+			    <p class="time">20.10.2020</p>
+			    <img src="img/кариес.jpg" alt="">
+			    <p>Для специалистов клиники WhiteApple лечение кариеса – одна из основных профессиональных специализаций. 
+				Мы располагаем современным лечебным оборудованием и широким спектром зарубежных медикаментозных и пломбировочных материалов, 
+				лечим кариес на всех его стадиях и предлагаем самые передовые, безболезненные и щадящие технологии его локализации.
+				<br><br><br><b>-от 4000 руб.</b>
+				</p>
+
+				<form class="form" name="feedback" method="POST">
+					<input
+							type="hidden"
+							th:name="${_csrf.parameterName}"
+							th:value="${_csrf.token}" />
+					<input class = "button" type="submit" name="submit_btn" value="Записаться"><br><br>
+					<div class="form">Услуга</div>
+					<select name="theme" required="required">
+						<option value="">Выберите услугу</option>
+						<option>Консультация</option>
+						<option>Лечение поверхностного кариеса</option>
+						<option>Лечение среднего кариеса</option>
+						<option>Лечение глубокого кариеса</option>
+					</select>
+					<div>Ваше имя</div>
+					<input type="text" name="name" required="required">
+					<div>Ваш email</div>
+					<input type="email" name="email" required="required">
+					<div>Желаемая дата</div>
+					<input type="date" name="date" required="required">
+					<div>Ваши пожелания</div>
+					<div></div>
+					<textarea name="message"></textarea>
+				</form>
+
+			</div>
+			</a>
+		</div>
+		<div class="col-12 col-sm-6 col-md-4">
+			
+			<div class="news_block">
+			    <h3>Удаление зубов</h3>
+			    <p class="time">16.10.2020</p>
+			    <img src="img/удаление.jpg" alt="">
+			    <p>Главная проблема острых и запущенных стоматологических патологий – боль при лечении зубов, которую боятся более 70% пациентов. 
+				Главная задача безболезненной стоматологической хирургии – максимально снять болевой эффект, дискомфорт и страхи у пациентов, 
+				чтобы создать условия для качественного лечения зубов. <br><br><br><br><b>-от 1200 руб.</b></p>
+
+				<form class="form" name="feedback" method="POST" >
+					<input
+							type="hidden"
+							th:name="${_csrf.parameterName}"
+							th:value="${_csrf.token}" />
+					<input class = "button" type="submit" name="submit_btn" value="Записаться"><br><br>
+					<div class="form">Услуга</div>
+					<select name="theme" required="required">
+						<option value="">Выберите услугу</option>
+						<option>Консультация</option>
+						<option>Удаление подвижного зуба</option>
+						<option>Удаление зуба мудрости</option>
+						<option>Удаление коронковой части</option>
+					</select>
+					<div>Ваше имя</div>
+					<input type="text" name="name" required="required">
+					<div>Ваш email</div>
+					<input type="email" name="email" required="required">
+					<div>Желаемая дата</div>
+					<input type="date" name="date" required="required">
+					<div>Ваши пожелания</div>
+					<div></div>
+					<textarea name="message"></textarea>
+				</form>
+
+			</div>
+			</a>
+		</div>
+		<div class="col-12 col-sm-6 col-md-4">
+			
+			<div class="news_block">
+			    <h3>Имплантология</h3>
+			    <p class="time">15.10.2020</p>
+			    <img src="img/имплант.jpg" alt="">
+			    <p>Важное преимущество имплантата по сравнению с другими видами протезов: полное отсутствие ограничений на интенсивность эксплуатации и механические нагрузки,
+				несъемная конструкция и идеальная эстетика ротовой полости. Имплантаты имеют типовую конструкцию, но множество вариантов – под протезирование практически любого 
+				зуба во рту и индивидуальные особенности костной ткани пациентов. <br><br><b>-от 27800 руб.</b></p>
+
+				<form class="form" name="feedback" method="POST" >
+					<input
+							type="hidden"
+							th:name="${_csrf.parameterName}"
+							th:value="${_csrf.token}" />
+					<input class = "button" type="submit" name="submit_btn" value="Записаться"><br><br>
+					<div class="form">Услуга</div>
+					<select name="theme" required="required">
+						<option value="">Выберите услугу</option>
+						<option>Консультация</option>
+						<option>Импланты Impro (Германия)</option>
+						<option>Восстановление верхний зубов</option>
+						<option>Имплантация нижней челюсти</option>
+					</select>
+					<div>Ваше имя</div>
+					<input type="text" name="name" required="required">
+					<div>Ваш email</div>
+					<input type="email" name="email" required="required">
+					<div>Желаемая дата</div>
+					<input type="date" name="date" required="required">
+					<div>Ваши пожелания</div>
+					<div></div>
+					<textarea name="message"></textarea>
+				</form>
+
+			</div>
+			</a>
+		</div>
+		<div class="col-12 col-sm-6 col-md-4">
+			
+			<div class="news_block">
+			    <h3>Брекеты, исправление прикуса</h3>
+			    <p class="time">14.10.2020</p>
+			    <img src="img/брекеты.jpg" alt="">
+			    <p>Центр Современной Стоматологии в Москве располагает подготовленными врачами-ортодонтологами, решающими проблемы исправления 
+				прикуса любой формы и сложности у взрослых пациентов, а также профессиональной зуботехнической 
+				мастерской для подгонки любых ортопедических систем под индивидуальные параметры челюстной архитектуры. <br><br><br><b>-от 45500 руб.</b></p>
+
+				<form class="form" name="feedback" method="POST" >
+					<input
+							type="hidden"
+							th:name="${_csrf.parameterName}"
+							th:value="${_csrf.token}" />
+					<input class = "button" type="submit" name="submit_btn" value="Записаться"><br><br>
+					<div class="form">Услуга</div>
+					<select name="theme" required="required">
+						<option value="">Выберите услугу</option>
+						<option>Консультация</option>
+						<option>Снятие брекет-системы</option>
+						<option>Исправление прикуса без брекетов</option>
+						<option>Установка брекетов</option>
+					</select>
+					<div>Ваше имя</div>
+					<input type="text" name="name" required="required">
+					<div>Ваш email</div>
+					<input type="email" name="email" required="required">
+					<div>Желаемая дата</div>
+					<input type="date" name="date" required="required">
+					<div>Ваши пожелания</div>
+					<div></div>
+					<textarea name="message"></textarea>
+				</form>
+
+			</div>
+			</a>
+		</div>
+		<div class="col-12 col-sm-6 col-md-4">
+			
+			<div class="news_block">
+			    <h3>Протезирование зубов</h3>
+			    <p class="time">13.10.2020</p>
+			    <img src="img/протез.jpg" alt="">
+			    <p>Отсутствие зубов во рту вызывает чувство дискомфорта у человека, нарушает жевательные функции челюстного аппарата, 
+				ведет к деформации зубных рядов, атрофии костной ткани и развитию заболеваний желудочно-кишечного тракта.
+				Современная стоматологическая ортопедия предлагает два типа протезирования – съемные и несъемные протезы.
+				<br><br><br><br><b>-от 13400 руб.</b></p>
+
+				<form class="form" name="feedback" method="POST" >
+					<input
+							type="hidden"
+							th:name="${_csrf.parameterName}"
+							th:value="${_csrf.token}" />
+					<input class = "button" type="submit" name="submit_btn" value="Записаться"><br><br>
+					<div class="form">Услуга</div>
+					<select name="theme" required="required">
+						<option value="">Выберите услугу</option>
+						<option>Консультация</option>
+						<option>Установка коронки</option>
+						<option>Установка съемных протезов</option>
+						<option>Установка несъемных протезов</option>
+					</select>
+					<div>Ваше имя</div>
+					<input type="text" name="name" required="required">
+					<div>Ваш email</div>
+					<input type="email" name="email" required="required">
+					<div>Желаемая дата</div>
+					<input type="date" name="date" required="required">
+					<div>Ваши пожелания</div>
+					<div></div>
+					<textarea name="message"></textarea>
+				</form>
+
+			</div>
+			</a>
+		</div>
+		<div class="col-12 col-sm-6 col-md-4">
+			
+			<div class="news_block">
+			    <h3>Ультразвуковая чистка зубов</h3>
+			    <p class="time">12.10.2020</p>
+			    <img src="img/чистка.jpg" alt="">
+			    <p>Специалисты клиники WhiteApple выполняют широкий спектр эстетических процедур, 
+				и предлагает своим пациентам профессиональное отбеливание зубов с помощью ультразвуковых абразивных технологий AirFlow, 
+				скейлеров Perioscan и Vector, а также специальных реминерализационных паст.
+			Отбеливание зубной эмали выполняется учетом индивидуальных особенностей организма пациента. <br><br><b>-от 3400 руб.</b></p></p>
+
+				<form class="form" name="feedback" method="POST" >
+					<input
+							type="hidden"
+							th:name="${_csrf.parameterName}"
+							th:value="${_csrf.token}" />
+					<input class = "button" type="submit" name="submit_btn" value="Записаться"><br><br>
+					<div class="form">Услуга</div>
+					<select name="theme" required="required">
+						<option value="">Выберите услугу</option>
+						<option>Консультация</option>
+						<option>Комплексная чистка+ультразвук</option>
+						<option>Удаление твердых отложений</option>
+						<option>Чистка ультразвуком</option>
+					</select>
+					<div>Ваше имя</div>
+					<input type="text" name="name" required="required">
+					<div>Ваш email</div>
+					<input type="email" name="email" required="required">
+					<div>Желаемая дата</div>
+					<input type="date" name="date" required="required">
+					<div>Ваши пожелания</div>
+					<div></div>
+					<textarea name="message"></textarea>
+				</form>
+
+			</div>
+			</a>
+		</div>
+	</div>	
+</div>
+<div class="container-fluid" id="footer">
+   <div class="row">
+   	<div class="col-md-2 align-self-center">
+   		<ul>
+			<li><a href="/">Услуги</a></li>
+			<li><a href="/reviews">Отзывы</a></li>
+			<li><a href="/contacts">Личный кабинет</a></li>
+
+	    </ul>
+   	</div>
+   	<div class="col-md-2 align-self-center">
+		<ul><li><a href="/reg">&#9745; Регистрация</a></li></ul>
+   	</div>
+   	<div class="col-md-4 align-self-center">
+   		&copy;2021г. WhiteApple. Все права защищены.
+   	</div>
+   	<div class="col-md-4 align-self-center">
+   		Соц.сети:<br>
+   	<a href="#"><img src="img/vk.png" alt=""></a>
+   	<a href="#"><img src="img/facebook.png" alt=""></a>
+   	<a href="#"><img src="img/instagram.png" alt=""></a>
+   	</div>
+   </div>
+</div>
+</body>
+</html>
