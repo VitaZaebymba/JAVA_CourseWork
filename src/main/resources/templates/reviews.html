@@ -87,7 +87,7 @@
 		<h3 style = "font-size: 25px">Отзывы о нашей клинике</h3><br><br><!--элемент от bootstrap, для центрирования информации-->
 		<div  th:each="el : ${reviews}">
 			<h5 th:text="${el.author.username}"></h5>
-			<p th:text="${el.text}"></p>
+			<p th:text="${el.text}"></p><br><br>
 		</div>
 	</div>
 </div>
