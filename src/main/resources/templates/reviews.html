@@ -79,12 +79,12 @@
 				type="hidden"
 				th:name="${_csrf.parameterName}"
 				th:value="${_csrf.token}" />
-		<input type="text" name="text" placeholder="Текст"></p>
+		<input type="text" name="text" placeholder="Текст отзыва"></p>
 		<input type="hidden" name="theme" value=""></p>
-		<input type="submit" value="Отправить" />
+		<input class = "review_button" type="submit" value="Отправить" />
 	</form>
 	<div class=" justify-content-md-center"><br><br>
-		<h3>Отзывы</h3><br><br><!--элемент от bootstrap, для центрирования информации-->
+		<h3 style = "font-size: 25px">Отзывы о нашей клинике</h3><br><br><!--элемент от bootstrap, для центрирования информации-->
 		<div  th:each="el : ${reviews}">
 			<h5 th:text="${el.author.username}"></h5>
 			<p th:text="${el.text}"></p>

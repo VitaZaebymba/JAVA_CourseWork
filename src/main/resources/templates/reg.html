@@ -38,38 +38,39 @@
     <a class="hiddenanchor" id="tologin"></a>
     <div id="wrapper">
           <div id="subscribe" class="animate form">
-            <form method="post"  autocomplete="on">
+			  <form method="post"  autocomplete="on">
 				<!--отправка токена для security-->
 				<input
 						type="hidden"
 						th:name="${_csrf.parameterName}"
 						th:value="${_csrf.token}" />
 
-                <h1> Sign up </h1>
-                <p>
-                    <label for="usernamesignup" class="uname" data-icon="u">Your username</label>
+                <h1> Регистрация </h1>
+				  <p>
+                    <label for="usernamesignup" class="uname" data-icon="u">Имя пользователя</label>
                     <input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="Geralt" />
                 </p>
                 <p>
-                    <label for="emailsignup" class="youmail" data-icon="e" > Your email</label>
+                    <label for="emailsignup" class="youmail" data-icon="e" >Ваш email</label>
                     <input id="emailsignup" name="emailsignup" required="required" type="text" placeholder="plotva@mail.ru"/>
                 </p>
                 <p>
-                    <label for="passwordsignup" class="youpasswd" data-icon="p">Your password </label>
+                    <label for="passwordsignup" class="youpasswd" data-icon="p">Ваш пароль</label>
                     <input id="passwordsignup" name="passwordsignup" required="required" type="password" placeholder="1272"/>
                 </p>
                 <p>
-                    <label for="passwordsignup_confirm" class="youpasswd" data-icon="p">Please confirm your password </label>
+                    <label for="passwordsignup_confirm" class="youpasswd" data-icon="p">Пожалуйста повторите пароль</label>
                     <input id="passwordsignup_confirm" name="passwordsignup_confirm" required="required" type="password" placeholder="1272"/>
                 </p>
-                <p class="signin button">
-                    <input type="submit" value="Sign up"/>
+                <p>
+                    <input class="signin button" type="submit" value="Sign up"/>
                 </p>
                 <p class="change_link">
-                    Already a member ?
-                    <a href="/contacts" class="to_subscribe"> Go and log in </a>
+                    Уже есть аккаунт?
+                    <a href="/contacts" class="to_subscribe"> Войти в личный кабинет </a>
                 </p>
             </form>
+			  </div>
         </div>
  
       

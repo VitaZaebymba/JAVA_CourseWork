@@ -365,3 +365,27 @@ body {
 	color: dodgerblue;
 	font-size: 17px;
 }
+.login.button,
+.signin.button{
+	text-align: right;
+	margin: 5px 0;
+	border-radius:10px;
+}
+
+.field {clear:both; text-align:right;}
+.review_button {
+	background-color: #1fcecb;
+	border: none;
+	color: #fffafa;
+	padding: 15px 25px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 18px;
+	margin: 4px 2px;
+	cursor: pointer;
+	font-weight: 700;
+	opacity: 0.8;
+	margin: 2px 0;
+
+}

@@ -57,30 +57,30 @@
 
                 <div th:if = "${User}==null" id="wrapper">
                     <div id="login" class="animate form">
-                        <form  method="post" autocomplete="on">
+                        <form class = "form" method="post" autocomplete="on">
                             <input
                                     type="hidden"
                                     th:name="${_csrf.parameterName}"
                                     th:value="${_csrf.token}" />
-                            <h1>Log in</h1>
+                            <h1>Личный кабинет</h1>
                             <p>
-                                <label for="username" class="uname" data-icon="u" > Your email or username </label>
-                                <input id="username" name="username" required="required" type="text" placeholder="Geralt or plotva@mail.ru"/>
+                                <label for="username" class="uname" data-icon="u">Имя пользователя</label>
+                                <input id="username" name="username" required="required" type="text" placeholder="Geralt"/>
                             </p>
                             <p>
-                                <label for="password" class="youpasswd" data-icon="p"> Your password </label>
+                                <label for="password" class="youpasswd" data-icon="p"> Ваш пароль </label>
                                 <input id="password" name="password" required="required" type="password" placeholder="1272" />
                             </p>
                             <p class="keeplogin">
                                 <input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" />
-                                <label for="loginkeeping">Keep me logged in</label>
+                                <label for="loginkeeping">Запомнить меня</label>
                             </p>
-                            <p class="login button">
-                                <input type="submit" value="Login" />
+                            <p>
+                                <input class="signin button" type="submit" value="Log in" />
                             </p>
                             <p class="change_link">
-                                Not a member yet ?
-                                <a href="/reg" class="to_subscribe">Join us</a>
+                                Еще нет аккаунта?
+                                <a href="/reg" class="to_subscribe">Присоединяйтесь к нам!</a>
                             </p>
                         </form>
                     </div>
